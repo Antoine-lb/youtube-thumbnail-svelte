@@ -1,22 +1,20 @@
 <script>
-	import Modal from '$lib/Modal.svelte';
-
-	let modalOpen = false;
+	import YoutubeVideo from '$lib/YoutubeVideo.svelte';
 </script>
 
-<button on:click={() => (modalOpen = !modalOpen)}>show video</button>
+<br />
+<br />
+<br />
 
-{#if modalOpen}
-	<Modal onClose={() => (modalOpen = false)}>
-		<iframe
-			src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-			title="YouTube video player"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen
-		></iframe>
-	</Modal>
-{/if}
+<div class=" flex justify-center">
+	<YoutubeVideo
+		src="https://er--test-public.s3.fr-par.scw.cloud/upscaled_1.webp"
+		alt="youtube video"
+	/>
+</div>
+<br />
+<br />
+<br />
 
 <p>
 	stug asdf ads asd fasd fasfstug asdf ads asd fasd fasfstug asdf ads asd fasd fasfstug asdf ads asd
