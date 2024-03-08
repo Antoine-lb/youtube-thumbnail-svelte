@@ -36,7 +36,10 @@
 	<img src="/try-it.svg" alt="try it text with arrow" class="w-20" />
 </div>
 <div class=" flex justify-center">
-	<YoutubeThumbnail alt="youtube video" />
+	<YoutubeThumbnail
+		alt="youtube video"
+		youtubeIFrameSrc="https://www.youtube.com/embed/NpvhYuH_6So?si=LLk1o46kHGDRf5t3"
+	/>
 </div>
 <br />
 <br />
