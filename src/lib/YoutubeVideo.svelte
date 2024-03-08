@@ -1,6 +1,7 @@
 <script lang="ts">
 	// export let onClose: MouseEventHandler<HTMLButtonElement>;
-	export let src: string | null;
+	export let thumbnailSrc: string = 'https://picsum.photos/800/600';
+	export let youtubeIFrameSrc: string = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
 	export let alt: string | null;
 	let modalOpen = false;
 
@@ -24,7 +25,7 @@
 		class="absolute w-full h-full z-10 flex justify-center items-center transition-all duration-300 ease-in-out"
 	>
 		<svg
-			class="h-20 w-20 fill-slate-900 transition-all duration-300 ease-in-out"
+			class="h-[4.5rem] w-[4.5rem] fill-slate-900 transition-all duration-300 ease-in-out"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 512 512"
 			class:!h-16={isHovering}
@@ -39,7 +40,7 @@
 		class="thumbnail-mask rounded-3xl absolute bg-slate-300 opacity-30 w-full h-full transition-all duration-300 ease-in-out"
 		class:!opacity-0={isHovering}
 	></div>
-	<img class="rounded-3xl" {src} {alt} />
+	<img class="rounded-3xl" src={thumbnailSrc} {alt} />
 </button>
 
 {#if modalOpen}
@@ -52,7 +53,7 @@
 		<div class="aspect-video w-full max-w-2xl">
 			<iframe
 				class="aspect-video w-full h-full z-40"
-				src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+				src={youtubeIFrameSrc}
 				title="YouTube video player"
 				frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
