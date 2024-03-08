@@ -2,36 +2,50 @@
 	import YoutubeVideo from '$lib/YoutubeVideo.svelte';
 	import toast from 'svelte-french-toast';
 
-	function copyComponent() {
+	async function copyComponent() {
+		const response = await fetch('YoutubeVideo.txt');
+		const text = await response.text();
+		console.log('text', text);
+
+		navigator.clipboard.writeText(text);
+
 		toast.success('Component copied!');
 	}
 </script>
 
-<br />
-<br />
-<br />
+<svelte:head>
+	<title>Youtube Thumbnail Svelte</title>
+	<meta name="description" content="Youtube Thumbnail Svelte" />
+	<meta name="keywords" content="svelte, youtube, thumbnail, component" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="index, follow" />
+	<meta name="theme-color" content="#FF3E00" />
+</svelte:head>
 
-<div class="flex justify-center rotate-3">
-	<h1 class="bg-[#FF3E00] text-3xl font-bold text-[#f3f4f0] py-1 px-3 text-center">
-		Svelte Thumbnail<br /> Component
+<div class="bg-[#FF3E00] h-1 fixed w-full z-50 shadow-lg"></div>
+<br />
+<br />
+<div class="flex justify-center">
+	<h1 class=" text-3xl font-bold text-[#333] py-1 px-3 text-center">
+		Svelte Youtube <br /> Thumbnail Component
 	</h1>
 </div>
 <br />
 
-<p class="font-bold text-center">Video thumbnail</p>
-<p class="font-bold text-center">+ hover effect</p>
-<p class="font-bold text-center">+ full screen modal</p>
-<p class="font-bold text-center">+ svelte</p>
-<p class="font-bold text-center">+ tailwind</p>
-
-<br />
-<br />
+<div class="max-w-[22rem] m-auto">
+	<img src="/try-it.svg" alt="try it text with arrow" class="w-20" />
+</div>
 <div class=" flex justify-center">
-	<YoutubeVideo src="https://picsum.photos/800/600" alt="youtube video" />
+	<YoutubeVideo alt="youtube video" />
 </div>
 <br />
 <br />
-<div class="border-dashed border-2 border-gray-400 max-w-xl m-auto p-5 rounded-3xl">
+<p class="font-bold text-center text-[#333] text-lg">Thumbnail + full screen modal</p>
+<p class="font-bold text-center text-[#333] text-lg">made with</p>
+<p class="font-bold text-center text-[#333] text-lg">Svelte + Tailwind</p>
+<br />
+<div class="border-dashed border-4 border-gray-300 max-w-xl m-auto p-5 rounded-3xl">
+	<p>How to use:</p>
 	<p>1. Create <code>YoutubeThumbnail.svelte</code> in your <code>lib</code> folder</p>
 	<p>2. Copy and paste the component:</p>
 	<br />
@@ -54,7 +68,7 @@
 	<p>6. DON'T copy the entire text, but only the url inside of <code>src</code></p>
 	<br />
 
-	<img src="iframe-src.webp" alt="iframe src" class="w-full" />
+	<img src="iframe-src.webp" alt="iframe src" class="w-full rounded" />
 
 	<br />
 
@@ -64,6 +78,14 @@
 </div>
 <br />
 <br />
+<br />
+
+<footer class="text-center py-10">
+	<a class="underline" href="https://github.com/Antoine-lb/youtube-thumbnail-svelte" target="_blank"
+		>https://github.com/Antoine-lb/youtube-thumbnail-svelte</a
+	>
+</footer>
+
 <br />
 <br />
 <br />
