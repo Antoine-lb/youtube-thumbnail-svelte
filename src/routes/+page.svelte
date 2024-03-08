@@ -1,9 +1,9 @@
 <script>
-	import YoutubeVideo from '$lib/YoutubeVideo.svelte';
+	import YoutubeThumbnail from '$lib/YoutubeThumbnail.svelte';
 	import toast from 'svelte-french-toast';
 
 	async function copyComponent() {
-		const response = await fetch('YoutubeVideo.txt');
+		const response = await fetch('YoutubeThumbnail.txt');
 		const text = await response.text();
 		console.log('text', text);
 
@@ -36,7 +36,7 @@
 	<img src="/try-it.svg" alt="try it text with arrow" class="w-20" />
 </div>
 <div class=" flex justify-center">
-	<YoutubeVideo alt="youtube video" />
+	<YoutubeThumbnail alt="youtube video" />
 </div>
 <br />
 <br />

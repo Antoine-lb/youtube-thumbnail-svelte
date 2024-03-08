@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let thumbnailSrc: string = 'https://picsum.photos/800/600';
 	export let youtubeIFrameSrc: string = 'https://www.youtube.com/embed/dQw4w9WgXcQ';
-	export let alt: string | null;
+	export let alt: string | null = 'Youtube thumbnail';
 	export let autoplay: boolean = true;
 
 	let modalOpen = false;
