@@ -1,6 +1,4 @@
 <script lang="ts">
-	import type { MouseEventHandler } from 'svelte/elements';
-
 	// export let onClose: MouseEventHandler<HTMLButtonElement>;
 	export let src: string | null;
 	export let alt: string | null;
