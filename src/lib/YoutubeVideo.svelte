@@ -17,7 +17,7 @@
 <br />
 <button
 	on:click={() => (modalOpen = !modalOpen)}
-	class="thumbnail relative w-52 aspect-video rounded-3xl overflow-hidden shadow-lg"
+	class="thumbnail relative w-52 aspect-video rounded-3xl overflow-hidden shadow-lg border border-slate-300"
 	on:mouseover={() => (isHovering = true)}
 	on:mouseleave={() => (isHovering = false)}
 	on:focus={() => (isHovering = true)}
@@ -38,10 +38,10 @@
 		>
 	</div>
 	<div
-		class="thumbnail-mask rounded-3xl absolute bg-white opacity-30 w-full h-full transition-all duration-300 ease-in-out"
-		class:opacity-0={isHovering}
+		class="thumbnail-mask rounded-3xl absolute bg-slate-300 opacity-30 w-full h-full transition-all duration-300 ease-in-out"
+		class:!opacity-0={isHovering}
 	></div>
-	<img class="rounded-3xl border border-slate-400" {src} {alt} />
+	<img class="rounded-3xl" {src} {alt} />
 </button>
 
 {#if modalOpen}
