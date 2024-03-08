@@ -13,6 +13,18 @@
 	/>
 </div>
 <br />
+<div class=" flex justify-center">
+	<YoutubeVideo src="https://picsum.photos/800/601" alt="youtube video" />
+</div>
+<br />
+<div class=" flex justify-center">
+	<YoutubeVideo src="https://picsum.photos/800/602" alt="youtube video" />
+</div>
+<br />
+<div class=" flex justify-center">
+	<YoutubeVideo src="https://picsum.photos/800/603" alt="youtube video" />
+</div>
+<br />
 <br />
 <br />
 
